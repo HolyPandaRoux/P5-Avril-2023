@@ -4,17 +4,14 @@ if (localStorage.getItem("cart") === null) {
     document.querySelector('h1').innerHTML += " est vide";
 }
 
-
 function getCartProducts() {
     return JSON.parse(localStorage.getItem("cart"));
 }
-
 
 /* Updating the cart products in local storage. */
 function updateCartProducts(productList) {
     localStorage.setItem("cart", JSON.stringify(productList));
 }
-
 
 /* function that displays the content of the cart. */
 function displayCartContent() {
@@ -54,7 +51,6 @@ function displayCartContent() {
 }
 displayCartContent();
 
-
 /* Updating the quantity of the product in the cart. */
 function updatedProduct() {
     document.addEventListener('change', (event) => {
@@ -74,7 +70,6 @@ function updatedProduct() {
     });
 }
 updatedProduct();
-
 
 /* Removing the item from the cart. */
 function removeItemFromCart() {
@@ -146,10 +141,11 @@ const formCity = document.getElementById('city');
 const isBetween = (length, min, max) => length < min || length > max ? false : true;
 
 
-/**
- * It checks if the length of the input is between the min and max.
- * returns a boolean value.
- */
+/*
+It checks if the length of the input is between the min and max.
+returns a boolean value.
+*/
+
 const checkFirstName = () => {
     let valid = false;
     /* Declaring two constants. */
@@ -218,10 +214,13 @@ const checkCity = () => {
     }
     return valid;
 };
+
+
+
 /**
- * The function checkFirstNameRegex() is called when the user clicks the submit button. It checks if
- * the value of the input field formFirstName matches the regex regexName. If it doesn't, it displays
- * an error message. If it does, it returns true.
+The function checkFirstNameRegex() is called when the user clicks the submit button. It checks if
+the value of the input field formFirstName matches the regex regexName. If it doesn't, it displays
+an error message. If it does, it returns true.
 **/
 const checkFirstNameRegex = () => {
     let valid = false;
